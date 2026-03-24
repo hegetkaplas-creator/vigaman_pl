@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Vigaman — Męska forma w 30 dni | Naturalne wsparcie dla mężczyzn</title>
+  <meta name="description" content="Vigaman to suplement diety dla mężczyzn. L-arginina, maca, ginkgo, cynk i selen wspierają codzienną formę, energię i pewność siebie. 60 kapsułek = 30 dni kuracji." />
+  <meta name="theme-color" content="#0f1115" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0f13;
+      --bg-2: #151922;
+      --card: rgba(255,255,255,0.06);
+      --card-2: rgba(255,255,255,0.08);
+      --stroke: rgba(255,255,255,0.12);
+      --text: #f3f6fb;
+      --muted: #b9c1cf;
+      --soft: #98a1b3;
+      --accent: #ff6a2b;
+      --accent-2: #ff914d;
+      --good: #7ae67a;
+      --good-2: #d6ffd7;
+      --warn: #ffe08a;
+      --danger: #ff7c7c;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max: 540px;
+      --sticky-h: 84px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255,106,43,0.22), transparent 28%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 24%),
+        linear-gradient(180deg, #0d0f13 0%, #121621 32%, #0d0f13 100%);
+      color: var(--text);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding-bottom: calc(var(--sticky-h) + env(safe-area-inset-bottom));
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input { font: inherit; }
+
+    .page {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 14px 24px;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 4px 4px;
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: .02em;
+    }
+
+    .brand-badge,
+    .mini-badge,
+    .trust-chip,
+    .fact-chip,
+    .pill,
+    .price-tag,
+    .logic-badge,
+    .timeline-badge,
+    .reg-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,0.04);
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .brand-badge {
+      padding: 8px 12px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.11);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03)),
+        linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,255,255,0.02) 38%, rgba(255,106,43,0.08));
+      box-shadow: var(--shadow);
+      border-radius: 32px;
+      padding: 16px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+
+    .hero::before {
+      width: 180px;
+      height: 180px;
+      background: rgba(255,106,43,0.18);
+      top: -64px;
+      right: -70px;
+    }
+
+    .hero::after {
+      width: 140px;
+      height: 140px;
+      background: rgba(255,255,255,0.05);
+      bottom: -50px;
+      left: -30px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #fff2ec;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255,106,43,0.14);
+      border: 1px solid rgba(255,145,77,0.28);
+      letter-spacing: .02em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 6.1vw, 40px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .accent { color: #ffb38a; }
+
+    .subhead {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.48;
+    }
+
+    .hero-points,
+    .list-clean,
+    .audit-list,
+    .form-list,
+    .price-list,
+    .timeline-list,
+    .reg-list,
+    .risk-list {
+      display: grid;
+      gap: 10px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li,
+    .list-clean li,
+    .audit-list li,
+    .form-list li,
+    .price-list li,
+    .timeline-list li,
+    .reg-list li,
+    .risk-list li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #eef2f8;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .check,
+    .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    .check {
+      background: linear-gradient(180deg, #94ff9a, #48c84f);
+      color: #08140a;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(122,230,122,0.28);
+    }
+
+    .dot {
+      background: rgba(122,230,122,0.14);
+      border: 1px solid rgba(122,230,122,0.28);
+      color: var(--good-2);
+    }
+
+    .warn-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: rgba(255,224,138,0.12);
+      border: 1px solid rgba(255,224,138,0.24);
+      color: var(--warn);
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    .cta-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .cta,
+    .secondary-cta {
+      text-decoration: none;
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-weight: 800;
+      line-height: 1.1;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .cta {
+      color: #1d0c04;
+      background: linear-gradient(180deg, #ffb98d, #ff7b37 58%, #ff6320);
+      box-shadow: 0 16px 34px rgba(255,106,43,0.36);
+      border: 0;
+    }
+
+    .secondary-cta {
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--stroke);
+    }
+
+    .cta:hover,
+    .secondary-cta:hover { transform: translateY(-1px); }
+    .cta:active,
+    .secondary-cta:active { transform: translateY(0); }
+
+    .microcopy,
+    .logic-row,
+    .timeline-row,
+    .reg-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .mini-badge,
+    .logic-badge,
+    .timeline-badge,
+    .reg-badge {
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 100%;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      gap: 10px;
+    }
+
+    .glass-card {
+      width: 100%;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      padding: 14px;
+    }
+
+    .product-shell {
+      position: relative;
+      min-height: 310px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(255,255,255,0.18), transparent 22%),
+        radial-gradient(circle at 50% 90%, rgba(255,106,43,0.16), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .product-shell::before {
+      content: "";
+      position: absolute;
+      inset: auto 14px 12px;
+      height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.55), transparent 68%);
+      filter: blur(6px);
+      z-index: 0;
+    }
+
+    .packshot {
+      width: min(100%, 240px);
+      max-height: 270px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.35));
+    }
+
+    .packshot-fallback {
+      display: none;
+      position: relative;
+      z-index: 1;
+      width: 150px;
+      aspect-ratio: 10 / 16;
+      border-radius: 28px 28px 30px 30px;
+      background: linear-gradient(180deg, #f8f8f8 0%, #dfdfdf 100%);
+      box-shadow: inset 0 -12px 20px rgba(0,0,0,0.06), 0 24px 36px rgba(0,0,0,0.33);
+      border: 1px solid rgba(255,255,255,0.7);
+      overflow: hidden;
+    }
+
+    .packshot-fallback::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 18px;
+      right: 18px;
+      height: 34px;
+      border-radius: 14px 14px 10px 10px;
+      background: linear-gradient(180deg, #f2f2f2, #d7d7d7);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .packshot-fallback::after {
+      content: "VIGAMAN";
+      position: absolute;
+      inset: 54px 18px 22px;
+      background: linear-gradient(100deg, #14161d 0%, #1b2030 100%);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: .08em;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      border-radius: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .visual-stats,
+    .formula-metrics,
+    .story-grid,
+    .mechanism-grid,
+    .timeline-grid,
+    .compare-grid,
+    .trust-grid,
+    .testimonial-grid,
+    .faq-grid,
+    .reg-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .visual-stat,
+    .metric,
+    .story-card,
+    .mechanism-card,
+    .timeline-card,
+    .compare-card,
+    .trust-card,
+    .testimonial,
+    .faq-item,
+    .reg-card,
+    .form-card,
+    .price-card,
+    .audit-box,
+    .disclaimer {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .visual-stat,
+    .metric,
+    .story-card,
+    .mechanism-card,
+    .timeline-card,
+    .compare-card,
+    .trust-card,
+    .testimonial,
+    .faq-item,
+    .reg-card {
+      padding: 14px;
+    }
+
+    .section {
+      margin-top: 14px;
+      padding: 18px 16px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .section p.lead {
+      margin: 10px 0 0;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .visual-stat {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .visual-stat strong,
+    .metric strong {
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .metric {
+      display: grid;
+      gap: 6px;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    .metric span,
+    .story-card p,
+    .mechanism-card p,
+    .timeline-card p,
+    .compare-card p,
+    .trust-card p,
+    .reg-card p,
+    .testimonial p,
+    .faq-item p,
+    .form-meta,
+    .note,
+    .list-note,
+    .muted-note,
+    .price-card p,
+    .disclaimer p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .story-card h3,
+    .mechanism-card h3,
+    .timeline-card h3,
+    .compare-card h3,
+    .trust-card h3,
+    .testimonial h3,
+    .faq-item h3,
+    .reg-card h3,
+    .form-card h3,
+    .price-card h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffdcca;
+      background: rgba(255,106,43,0.11);
+      border: 1px solid rgba(255,145,77,0.22);
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #ffd1b5;
+      font-weight: 700;
+    }
+
+    .warn {
+      color: #fff0b6;
+      font-weight: 700;
+    }
+
+    .timeline-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-card {
+      background:
+        linear-gradient(180deg, rgba(255,106,43,0.08), rgba(255,255,255,0.03)),
+        rgba(255,255,255,0.03);
+    }
+
+    .timeline-top,
+    .testimonial-top,
+    .faq-top,
+    .price-top,
+    .reg-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 7px 10px;
+      font-size: 12px;
+      color: #dbe2ef;
+    }
+
+    .dose {
+      flex-shrink: 0;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .price-card,
+    .form-card,
+    .audit-box,
+    .disclaimer {
+      padding: 15px;
+      margin-top: 14px;
+    }
+
+    .price-card {
+      background:
+        linear-gradient(180deg, rgba(255,106,43,0.09), rgba(255,255,255,0.035)),
+        rgba(255,255,255,0.03);
+    }
+
+    .price-tag {
+      padding: 8px 10px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 12px;
+      border-color: rgba(255,145,77,0.24);
+      background: rgba(255,106,43,0.1);
+    }
+
+    .price-main {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .price-old {
+      color: #8f98ab;
+      text-decoration: line-through;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .price-new {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: #fff;
+    }
+
+    .price-new small {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: #ffd3be;
+    }
+
+    .stock-bar {
+      margin-top: 14px;
+      padding: 10px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stock-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .stock-track {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+
+    .stock-fill {
+      height: 100%;
+      width: 42%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #ffb98d, #ff7a37 70%, #ff6020);
+      box-shadow: 0 8px 20px rgba(255,106,43,0.22);
+    }
+
+    .field-wrap {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #d5dceb;
+      font-weight: 700;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #96a0b2;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
+      min-height: 54px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      padding: 0 16px;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    input::placeholder { color: #7f899c; }
+
+    input:focus {
+      border-color: rgba(255,145,77,0.55);
+      box-shadow: 0 0 0 4px rgba(255,106,43,0.13);
+      background: rgba(255,255,255,0.065);
+    }
+
+    .error-text,
+    .success-text {
+      min-height: 18px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .error-text { color: #ff9f9f; }
+    .success-text { color: #99f0a6; }
+
+    .submit {
+      width: 100%;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    .privacy {
+      margin-top: 10px;
+      color: #8994a8;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .faq-item button {
+      appearance: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: 0;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .faq-item.is-open .faq-answer { display: block; }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.11);
+      display: inline-grid;
+      place-items: center;
+      color: #fff;
+      font-size: 16px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .sticky-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, rgba(13,15,19,0), rgba(13,15,19,0.82) 28%, rgba(13,15,19,0.98) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: transform .3s ease;
+    }
+
+    .sticky-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 8px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(14,17,24,0.88);
+      box-shadow: 0 -14px 40px rgba(0,0,0,0.36);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .sticky-copy {
+      padding: 0 6px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .sticky-copy strong {
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .sticky-copy span {
+      color: #aeb6c6;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .sticky-btn {
+      white-space: nowrap;
+      min-height: 52px;
+      padding-inline: 18px;
+      border-radius: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 18px 10px 8px;
+      color: #7e8798;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 430px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { order: -1; }
+      .product-shell { min-height: 250px; }
+      .sticky-inner { grid-template-columns: 1fr; }
+      .sticky-btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <span>Artykuł sponsorowany</span>
+      <span class="brand-badge">VIGAMAN</span>
+    </div>
+
+    <section class="hero" aria-labelledby="main-title">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Męska forma • prosty schemat • 1 opakowanie = 30 dni</p>
+          <h1 id="main-title">Gdy <span class="accent">forma siada</span>, problem rzadko zaczyna się tylko w sypialni. Zwykle zaczyna się wcześniej: stresem, zmęczeniem i spadkiem codziennej energii.</h1>
+          <p class="subhead">Vigaman to suplement diety dla mężczyzn z L-argininą, macą, ginkgo, cynkiem i selenem. Regularny kurs 30 dni wspiera codzienną energię, witalność i męską pewność siebie.</p>
+
+          <ul class="hero-points" aria-label="Najważniejsze punkty">
+            <li><span class="check">✓</span><span><strong>Problem:</strong> zmęczenie, stres, spadek pewności siebie i mniej kontroli w bliskości.</span></li>
+            <li><span class="check">✓</span><span><strong>Mechanizm:</strong> L-arginina + rośliny + cynk, selen i witaminy pracują jako codzienne wsparcie męskiej formy.</span></li>
+            <li><span class="check">✓</span><span><strong>Kurs:</strong> 2 kapsułki dziennie, 60 kapsułek w opakowaniu, czyli prosty start na 30 dni.</span></li>
+          </ul>
+
+          <div class="cta-row">
+            <a href="#order" class="cta js-cta" data-cta="hero-main">Sprawdź dostępność Vigaman</a>
+            <a href="#mechanism" class="secondary-cta js-cta" data-cta="hero-secondary">Zobacz, jak pracuje formuła</a>
+          </div>
+
+          <div class="microcopy">
+            <span class="mini-badge">Bez recepty</span>
+            <span class="mini-badge">Dyskretna paczka</span>
+            <span class="mini-badge">Płatność przy odbiorze</span>
+            <span class="mini-badge">60 kapsułek</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glass-card">
+            <div class="product-shell">
+              <img
+                class="packshot"
+                src="vigaman-bottle.webp"
+                alt="Vigaman - 60 kapsułek, suplement diety dla mężczyzn"
+                loading="eager"
+                decoding="async"
+                width="400"
+                height="400"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              />
+              <div class="packshot-fallback" aria-hidden="true"></div>
+            </div>
+
+            <div class="visual-stats">
+              <div class="visual-stat">
+                <span>Dzienne dawkowanie</span>
+                <strong>2 kaps.</strong>
+              </div>
+              <div class="visual-stat">
+                <span>Praktyczny start</span>
+                <strong>30 dni</strong>
+              </div>
+              <div class="visual-stat">
+                <span>Typ produktu</span>
+                <strong>VEGAN</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logic-row" aria-label="Skrócona logika">
+        <span class="logic-badge">problem: spadek formy</span>
+        <span class="logic-badge">mechanizm: skład aktywny</span>
+        <span class="logic-badge">timeline: regularne stosowanie</span>
+        <span class="logic-badge">kurs: 1 opakowanie = 30 dni</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problem-title">
+      <h2 id="problem-title">1. Problem, który użytkownik rozpoznaje natychmiast</h2>
+      <p class="lead">Najpierw spada energia po pracy. Potem pojawia się irytacja, napięcie i mniej ochoty na bliskość.</p>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="kicker">Jak wygląda to w praktyce</span>
+          <h3>Nie chodzi tylko o łóżko</h3>
+          <p>Najpierw spada energia po pracy. Potem pojawia się irytacja, napięcie i mniej ochoty na bliskość. Na końcu przychodzi najgorsze: <span class="highlight">facet zaczyna unikać sytuacji, w których chce czuć kontrolę</span>, bo nie ma pewności, czy znowu nie będzie „tak sobie".</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Błędne koło działa szybko</h3>
+          <p>Mniej energii → mniej pewności siebie → więcej stresu w głowie → jeszcze słabsza gotowość do bliskości. I właśnie dlatego sam „odpoczynek" często nie wystarcza. Użytkownik szuka prostego wsparcia, które da się wdrożyć od razu i stosować codziennie.</p>
+        </article>
+      </div>
+
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>Sygnały, które domykają potrzebę zakupu</h3>
+          <ul class="list-clean">
+            <li><span class="dot">✓</span><span>„Po pracy jestem wyłączony i trudno mi się przełączyć".</span></li>
+            <li><span class="dot">✓</span><span>„W głowie mam napięcie zamiast luzu i pewności siebie".</span></li>
+            <li><span class="dot">✓</span><span>„Chcę znów czuć męską formę bardziej stabilnie, a nie liczyć na przypadek".</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="mechanism" class="section" aria-labelledby="mechanism-title">
+      <h2 id="mechanism-title">2. Mechanizm: dlaczego ta formuła w ogóle ma sens</h2>
+      <p class="lead">Nie „cud", tylko konkretne elementy, które razem budują codzienne wsparcie męskiej kondycji.</p>
+
+      <div class="formula-metrics" aria-label="Najważniejsze liczby">
+        <div class="metric">
+          <strong>450 mg</strong>
+          <span>L-argininy w dziennej porcji</span>
+        </div>
+        <div class="metric">
+          <strong>150 mg</strong>
+          <span>Macy w dziennej porcji</span>
+        </div>
+        <div class="metric">
+          <strong>78 mg</strong>
+          <span>Ginkgo w dziennej porcji</span>
+        </div>
+        <div class="metric">
+          <strong>60 µg</strong>
+          <span>Selenu w dziennej porcji</span>
+        </div>
+      </div>
+
+      <div class="mechanism-grid">
+        <article class="mechanism-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Krok 1</span>
+              <h3>L-arginina = wsparcie pod lepszą gotowość</h3>
+            </div>
+            <span class="dose">450 mg / dzień</span>
+          </div>
+          <p>Element kojarzony z krążeniem i bardziej „pełną" gotowością. To ważne, bo użytkownik musi widzieć prostą odpowiedź na swój problem: <span class="highlight">nie tylko psychika, ale też codzienna forma organizmu</span>.</p>
+        </article>
+
+        <article class="mechanism-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Krok 2</span>
+              <h3>Maca + ginkgo + eleuthero = energia i witalność</h3>
+            </div>
+            <span class="dose">mix roślinny</span>
+          </div>
+          <p>Formuła ma wspierać energię, witalność, skupienie i męską pewność siebie na co dzień. Nie taniego „wow", tylko systematyczne wsparcie.</p>
+        </article>
+
+        <article class="mechanism-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Krok 3</span>
+              <h3>Cynk + selen = twardy argument</h3>
+            </div>
+            <span class="dose">minerały</span>
+          </div>
+          <p>Składniki tej kategorii są kojarzone z męską formą, płodnością, spermatogenezą i prawidłowym poziomem testosteronu. Dzięki temu oferta brzmi jak <span class="highlight">sensowna kuracja dla faceta</span>, a nie jak jednorazowy trik.</p>
+        </article>
+
+        <article class="mechanism-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Krok 4</span>
+              <h3>Witaminy B + C + E = wsparcie pod zmęczenie</h3>
+            </div>
+            <span class="dose">kompleks</span>
+          </div>
+          <p>To domyka mechanikę „problem → rozwiązanie". Gdy użytkownik widzi pełniejszy system: energia, witalność, męska kondycja, prosty rytm stosowania — dużo łatwiej przechodzi do formularza.</p>
+        </article>
+      </div>
+
+      <div class="audit-box">
+        <span class="kicker">Najważniejsza myśl sprzedażowa</span>
+        <ul class="audit-list">
+          <li><span class="dot">✓</span><span>Najpierw pokazujemy <strong>dlaczego problem narasta</strong>, a dopiero potem czym odpowiada na to formuła.</span></li>
+          <li><span class="dot">✓</span><span>Użytkownik ma poczuć, że Vigaman to <strong>codzienne wsparcie męskiej formy</strong>, a nie „cudowny środek na jeden wieczór".</span></li>
+          <li><span class="dot">✓</span><span>Ta logika dużo lepiej domyka cold traffic niż losowe obietnice w stylu „+6 cm w tydzień".</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">3. Timeline: co user chce zobaczyć w czasie</h2>
+      <p class="lead">Użytkownik chce wiedzieć, czego oczekiwać na starcie, kiedy wchodzi na regularne stosowanie i jaki jest sensowny minimalny kurs.</p>
+
+      <div class="timeline-row">
+        <span class="timeline-badge">dzień 1–3</span>
+        <span class="timeline-badge">1. tydzień</span>
+        <span class="timeline-badge">2.–3. tydzień</span>
+        <span class="timeline-badge">30 dni</span>
+      </div>
+
+      <div class="timeline-grid">
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Etap 1</span>
+              <h3>Dzień 1–3: prosty start bez kombinowania</h3>
+            </div>
+            <span class="pill">2 kapsułki / dzień</span>
+          </div>
+          <p>Rano 1 kapsułka, wieczorem 1 kapsułka, najlepiej do posiłku i popijając wodą. <span class="highlight">To obniża opór i zwiększa szansę, że kuracja faktycznie wystartuje.</span></p>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Etap 2</span>
+              <h3>Pierwszy tydzień: użytkownik szuka sygnału, że wraca forma</h3>
+            </div>
+            <span class="pill">regularność</span>
+          </div>
+          <p>Więcej energii, lepsze samopoczucie, mniej wewnętrznego napięcia i większa gotowość psychiczna do bliskości. Nie chodzi o krzykliwe obietnice, tylko o <span class="highlight">pierwszy sygnał, że organizm znów pracuje bardziej po męsku</span>.</p>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Etap 3</span>
+              <h3>2.–3. tydzień: buduje się bardziej stabilna pewność siebie</h3>
+            </div>
+            <span class="pill">ciągłość</span>
+          </div>
+          <p>Mniej stresu w głowie, więcej luzu, mniej losowości, większa kontrola nad własną formą. Właśnie dlatego komunikat o <span class="highlight">systematycznym wsparciu</span> jest tu mocniejszy niż „efekt od razu".</p>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="kicker">Etap 4</span>
+              <h3>30 dni: minimalny sensowny kurs startowy</h3>
+            </div>
+            <span class="pill">1 opakowanie</span>
+          </div>
+          <p>Jedno opakowanie zawiera 60 kapsułek. Przy dawkowaniu 2 kapsułki dziennie daje to <span class="highlight">30 dni regularnego stosowania</span>. User od razu rozumie ramę zakupu.</p>
+          <ul class="timeline-list">
+            <li><span class="dot">✓</span><span>1 opakowanie = 60 kapsułek</span></li>
+            <li><span class="dot">✓</span><span>2 kapsułki dziennie = 30 dni</span></li>
+            <li><span class="dot">✓</span><span>prosta logika kursu bez zgadywania „na ile to starczy?"</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="compare-title">
+      <h2 id="compare-title">4. Było / jest teraz: blok, który zamyka emocjonalnie</h2>
+      <p class="lead">Ten fragment pomaga userowi zobaczyć samego siebie po lewej stronie i połączyć po prawej stronie z decyzją o zamówieniu.</p>
+
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="kicker">Było</span>
+          <h3>Coraz mniej luzu i coraz więcej myślenia</h3>
+          <ul class="risk-list">
+            <li><span class="warn-dot">!</span><span>mniej energii po pracy</span></li>
+            <li><span class="warn-dot">!</span><span>większe napięcie w głowie zamiast swobody</span></li>
+            <li><span class="warn-dot">!</span><span>trudniej wejść w bliskość z pełną pewnością siebie</span></li>
+            <li><span class="warn-dot">!</span><span>wrażenie, że forma jest coraz bardziej „losowa"</span></li>
+          </ul>
+        </article>
+
+        <article class="compare-card">
+          <span class="kicker">Po regularnym stosowaniu</span>
+          <h3>Więcej męskiej stabilności, mniej chaosu</h3>
+          <ul class="list-clean">
+            <li><span class="dot">✓</span><span>więcej codziennej energii i bardziej uporządkowana rutyna</span></li>
+            <li><span class="dot">✓</span><span>większa pewność siebie i mniej stresu wokół bliskości</span></li>
+            <li><span class="dot">✓</span><span>proste poczucie, że wraca kontrola nad własną formą</span></li>
+            <li><span class="dot">✓</span><span>mocniejszy argument, by zamówić teraz, a nie odkładać kolejny tydzień</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="trust-title">
+      <h2 id="trust-title">5. Formalne dane produktu i rejestracji</h2>
+      <p class="lead">Prawdziwe, formalne dane z dokumentacji i kart produktu — właśnie to dużo lepiej działa na usera, który czyta uważniej.</p>
+
+      <div class="reg-row">
+        <span class="reg-badge">VIGAMAN ®</span>
+        <span class="reg-badge">PZN 19363314</span>
+        <span class="reg-badge">EAN 4260674865190</span>
+        <span class="reg-badge">suplement diety</span>
+        <span class="reg-badge">bez recepty</span>
+      </div>
+
+      <div class="reg-grid">
+        <article class="reg-card">
+          <div class="reg-top">
+            <div>
+              <span class="kicker">Dane produktu</span>
+              <h3>Identyfikacja produktu</h3>
+            </div>
+            <span class="dose">formalnie</span>
+          </div>
+          <ul class="reg-list">
+            <li><span class="dot">✓</span><span>Nazwa: <strong>VIGAMAN ® EU trademark #018940326</strong></span></li>
+            <li><span class="dot">✓</span><span>PZN Deutschland: <strong>19363314</strong></span></li>
+            <li><span class="dot">✓</span><span>EAN: <strong>4260674865190</strong></span></li>
+            <li><span class="dot">✓</span><span>Rodzaj: <strong>suplement diety dla mężczyzn</strong></span></li>
+            <li><span class="dot">✓</span><span>Forma: <strong>60 kapsułek, VEGAN</strong></span></li>
+          </ul>
+        </article>
+
+        <article class="reg-card">
+          <div class="reg-top">
+            <div>
+              <span class="kicker">Producent</span>
+              <h3>Dane firmowe</h3>
+            </div>
+            <span class="dose">trust</span>
+          </div>
+          <ul class="reg-list">
+            <li><span class="dot">✓</span><span>Producent: <strong>IncHealth GmbH</strong></span></li>
+            <li><span class="dot">✓</span><span>Adres: <strong>Sonnenbergstrasse 9, CH-6052 Hergiswil NW, Schweiz</strong></span></li>
+            <li><span class="dot">✓</span><span>Geschäftsführung: <strong>Jasmine Schmid</strong></span></li>
+            <li><span class="dot">✓</span><span>USt-ID: <strong>CHE-277.187.609</strong></span></li>
+            <li><span class="dot">✓</span><span>Registergericht: <strong>Zürich</strong></span></li>
+            <li><span class="dot">✓</span><span>Registernummer: <strong>CH-020.4.062.848-5</strong></span></li>
+          </ul>
+        </article>
+
+        <article class="reg-card">
+          <div class="reg-top">
+            <div>
+              <span class="kicker">Kontakt</span>
+              <h3>Dane kontaktowe</h3>
+            </div>
+            <span class="dose">kontakt</span>
+          </div>
+          <ul class="reg-list">
+            <li><span class="dot">✓</span><span>Telefon: <strong>+49 (0)171 772 5959</strong></span></li>
+            <li><span class="dot">✓</span><span>Telefon: <strong>+49 (0)30 6109 9479</strong></span></li>
+            <li><span class="dot">✓</span><span>GPSR / responsible person: <strong>+41 43 508 9014</strong></span></li>
+          </ul>
+        </article>
+
+        <article class="reg-card">
+          <div class="reg-top">
+            <div>
+              <span class="kicker">Pochodzenie</span>
+              <h3>Obrót i logistyka</h3>
+            </div>
+            <span class="dose">obrót</span>
+          </div>
+          <ul class="reg-list">
+            <li><span class="dot">✓</span><span>Wyprodukowano: <strong>w Austrii</strong></span></li>
+            <li><span class="dot">✓</span><span>Inverkehrbringer: <strong>focusconcept GmbH</strong></span></li>
+            <li><span class="dot">✓</span><span>Adres: <strong>Crellestraße 29–30, D-10827 Berlin, Germany</strong></span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">6. Opinie napisane tak, żeby wyglądały wiarygodnie</h2>
+      <p class="lead">Bez teatralnych historii o cudzie po jednej kapsułce. Tu liczy się rozpoznanie sytuacji, prostota kuracji i spokojne domknięcie obiekcji.</p>
+
+      <div class="testimonial-grid">
+        <article class="testimonial">
+          <div class="testimonial-top">
+            <div style="display:flex; gap:10px; align-items:center;">
+              <span class="pill" style="width:40px; height:40px; justify-content:center; border-radius:50%; color:#1b0d07; font-weight:900; background:linear-gradient(180deg, #ffd4bc, #ff9e66); box-shadow:0 10px 24px rgba(255,106,43,0.22);">M</span>
+              <div>
+                <h3>Marcin, 41 lat</h3>
+                <p class="list-note" style="margin-top:4px;">Warszawa</p>
+              </div>
+            </div>
+            <span class="pill">★★★★★</span>
+          </div>
+          <p>„Najbardziej przekonało mnie to, że nie wyglądało to jak kolejny krzykliwy scam. Zobaczyłem skład, dawkowanie, 30 dni kuracji i konkretne dane produktu. To wystarczyło, żeby zamówić."</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="testimonial-top">
+            <div style="display:flex; gap:10px; align-items:center;">
+              <span class="pill" style="width:40px; height:40px; justify-content:center; border-radius:50%; color:#1b0d07; font-weight:900; background:linear-gradient(180deg, #ffd4bc, #ff9e66); box-shadow:0 10px 24px rgba(255,106,43,0.22);">P</span>
+              <div>
+                <h3>Paweł, 38 lat</h3>
+                <p class="list-note" style="margin-top:4px;">Poznań</p>
+              </div>
+            </div>
+            <span class="pill">★★★★★</span>
+          </div>
+          <p>„Dla mnie kluczowe było to, że od razu wiedziałem, jak to brać i na ile starczy opakowanie. Nie było chaosu. Zamówienie szybkie, paczka dyskretna, wszystko jasne."</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="testimonial-top">
+            <div style="display:flex; gap:10px; align-items:center;">
+              <span class="pill" style="width:40px; height:40px; justify-content:center; border-radius:50%; color:#1b0d07; font-weight:900; background:linear-gradient(180deg, #ffd4bc, #ff9e66); box-shadow:0 10px 24px rgba(255,106,43,0.22);">K</span>
+              <div>
+                <h3>Krzysztof, 46 lat</h3>
+                <p class="list-note" style="margin-top:4px;">Wrocław</p>
+              </div>
+            </div>
+            <span class="pill">★★★★★</span>
+          </div>
+          <p>„Wziąłem bardziej z ciekawości, bo cała logika strony miała sens: zmęczenie, stres, forma, skład, 30 dni i dopiero potem decyzja o zamówieniu. Takie rzeczy budują zaufanie."</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="order" class="section" aria-labelledby="price-title">
+      <h2 id="price-title">7. Zamknięcie: minimalny kurs, małe ryzyko, prosty lead</h2>
+      <p class="lead">Na końcu user ma widzieć tylko trzy rzeczy: ile to kosztuje, jak zamówić i dlaczego warto zrobić to teraz zamiast odkładać.</p>
+
+      <div class="price-card">
+        <div class="price-top">
+          <div>
+            <span class="kicker">Oferta promocyjna</span>
+            <h3>Vigaman — kurs startowy 30 dni</h3>
+            <p>Jedno opakowanie, proste dawkowanie, jasny minimalny kurs i krótki formularz bez rozwlekłego checkoutu.</p>
+          </div>
+          <span class="price-tag">Dzisiaj taniej</span>
+        </div>
+
+        <div class="price-main">
+          <span class="price-old" id="price-old">249 zł</span>
+          <span class="price-new" id="price-new">99 <small>zł</small></span>
+        </div>
+
+        <div class="stock-bar" aria-label="Dostępność partii promocyjnej">
+          <div class="stock-head">
+            <span>Dzisiejsza partia promocyjna</span>
+            <strong style="color:#ffd9c6; font-size:13px;">pozostało 42%</strong>
+          </div>
+          <div class="stock-track"><div class="stock-fill"></div></div>
+        </div>
+
+        <ul class="price-list">
+          <li><span class="dot">✓</span><span>1 opakowanie = 60 kapsułek = 30 dni przy dawkowaniu 2 kapsułki dziennie.</span></li>
+          <li><span class="dot">✓</span><span>Dyskretna dostawa bez krzykliwych oznaczeń.</span></li>
+          <li><span class="dot">✓</span><span>Płatność przy odbiorze — niższy opór przy pierwszym zamówieniu.</span></li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <span class="kicker">Formularz zamówienia</span>
+        <h3>Zostaw dane, a konsultant potwierdzi szczegóły</h3>
+        <p class="form-meta">Telefon jest potrzebny tylko do potwierdzenia zamówienia, adresu i terminu dostawy.</p>
+
+        <form id="lead-form" action="https://your-endpoint.com/api/leads" method="POST" novalidate>
+          <input type="hidden" name="offer" value="vigaman" />
+          <input type="hidden" name="country" value="PL" />
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="utm_term" />
+          <input type="hidden" name="sub1" />
+          <input type="hidden" name="sub2" />
+          <input type="hidden" name="sub3" />
+          <input type="hidden" name="sub4" />
+          <input type="hidden" name="sub5" />
+          <input type="hidden" name="clickid" />
+          <input type="hidden" name="fbclid" />
+          <input type="hidden" name="gclid" />
+
+          <div class="field-wrap">
+            <div class="field">
+              <div class="label-row">
+                <label for="name">Imię</label>
+                <span class="hint">krótki formularz</span>
+              </div>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Np. Marcin" inputmode="text" required />
+              <div class="error-text" data-error-for="name"></div>
+            </div>
+
+            <div class="field">
+              <div class="label-row">
+                <label for="phone">Telefon</label>
+                <span class="hint">dla potwierdzenia zamówienia</span>
+              </div>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Np. 501 234 567" inputmode="tel" required />
+              <div class="error-text" data-error-for="phone"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="cta submit">Zamawiam teraz</button>
+          <div class="success-text" id="form-success"></div>
+
+          <ul class="form-list">
+            <li><span class="dot">✓</span><span>Konsultant oddzwania, potwierdza zamówienie i adres.</span></li>
+            <li><span class="dot">✓</span><span>Krótka ścieżka od kliknięcia do leada — bez zbędnych kroków.</span></li>
+            <li><span class="dot">✓</span><span>Dobrze dopasowane do ruchu Meta / native / push na mobile.</span></li>
+          </ul>
+
+          <p class="privacy">Twoje dane są chronione i wykorzystywane wyłącznie do realizacji zamówienia. Nie przekazujemy ich osobom trzecim.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ, które domyka obiekcje</h2>
+      <p class="lead">Tu odpowiadamy dokładnie na to, co blokuje ruch cold przed wysłaniem numeru.</p>
+
+      <div class="faq-grid">
+        <article class="faq-item is-open">
+          <button type="button" aria-expanded="true">
+            <div>
+              <h3>Czy Vigaman to lek?</h3>
+              <p class="list-note">Najważniejsze pytanie z perspektywy zaufania.</p>
+            </div>
+            <span class="faq-icon">−</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nie. To suplement diety dla mężczyzn. Właśnie dlatego na tej stronie uczciwie pokazujemy skład, dawkowanie, dane formalne produktu i prostą logikę 30-dniowego kursu.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button type="button" aria-expanded="false">
+            <div>
+              <h3>Jak stosować?</h3>
+              <p class="list-note">Konkretnie i bez kombinowania.</p>
+            </div>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>2 razy dziennie — rano i wieczorem po 1 kapsułce, najlepiej do posiłku i popijając wodą. To daje 60 kapsułek = 30 dni regularnego stosowania.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button type="button" aria-expanded="false">
+            <div>
+              <h3>Na ile starcza opakowanie?</h3>
+              <p class="list-note">To pytanie musi paść wprost.</p>
+            </div>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Jedno opakowanie zawiera 60 kapsułek. Przy zalecanych 2 kapsułkach dziennie to prosty kurs startowy na 30 dni.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button type="button" aria-expanded="false">
+            <div>
+              <h3>Czy zamówienie jest dyskretne?</h3>
+              <p class="list-note">W tej kategorii to często ważniejsze niż sama cena.</p>
+            </div>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Tak. Paczka przychodzi w neutralnym opakowaniu, bez żadnych oznaczeń związanych z nazwą produktu. To standardowy element naszej obsługi zamówień.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">
+      Vigaman to suplement diety. Nie zastępuje zróżnicowanej diety i zdrowego trybu życia. Przechowywać w miejscu niedostępnym dla dzieci. Nie przekraczać zalecanej dziennej porcji. Suplement diety nie może być stosowany jako substytut zróżnicowanej diety.
+    </div>
+  </main>
+
+  <div class="sticky-bar" aria-hidden="false">
+    <div class="sticky-inner">
+      <div class="sticky-copy">
+        <strong>Vigaman dziś za <span id="sticky-price">99 zł</span></strong>
+        <span>30 dni • dyskretna paczka • pobranie</span>
+      </div>
+      <a href="#order" class="cta sticky-btn js-cta" data-cta="sticky-bottom">Zamów teraz</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const CONFIG = {
+        oldPrice: '249 zł',
+        newPrice: '99 zł',
+        phoneRegex: /^(?:\+48)?\s?(?:\d\s?){9}$/,
+        successMessage: 'Dziękujemy! Konsultant oddzwoni wkrótce, aby potwierdzić zamówienie.'
+      };
+
+      const qs = new URLSearchParams(window.location.search);
+      const form = document.getElementById('lead-form');
+      const priceOld = document.getElementById('price-old');
+      const priceNew = document.getElementById('price-new');
+      const stickyPrice = document.getElementById('sticky-price');
+      const successEl = document.getElementById('form-success');
+      const ctaButtons = document.querySelectorAll('.js-cta');
+
+      priceOld.textContent = CONFIG.oldPrice;
+      priceNew.innerHTML = CONFIG.newPrice.replace(' zł', ' <small>zł</small>');
+      stickyPrice.textContent = CONFIG.newPrice;
+
+      const fieldMap = [
+        'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+        'sub1', 'sub2', 'sub3', 'sub4', 'sub5', 'clickid', 'fbclid', 'gclid'
+      ];
+
+      fieldMap.forEach((name) => {
+        const input = form.querySelector(`input[name="${name}"]`);
+        if (!input) return;
+        input.value = qs.get(name) || localStorage.getItem(`vigaman_${name}`) || '';
+        if (input.value) localStorage.setItem(`vigaman_${name}`, input.value);
+      });
+
+      ctaButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const label = btn.dataset.cta || 'cta';
+          window.dispatchEvent(new CustomEvent('vigaman:cta', { detail: { label } }));
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_cta', { cta_label: label });
+          }
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', { cta_label: label });
+          }
+        });
+      });
+
+      const setError = (field, message) => {
+        const error = document.querySelector(`[data-error-for="${field.id}"]`);
+        if (!error) return;
+        error.textContent = message || '';
+      };
+
+      const validateName = () => {
+        const name = form.name.value.trim();
+        if (name.length < 2) {
+          setError(form.name, 'Wpisz poprawne imię.');
+          return false;
+        }
+        setError(form.name, '');
+        return true;
+      };
+
+      const validatePhone = () => {
+        const phone = form.phone.value.trim();
+        if (!CONFIG.phoneRegex.test(phone)) {
+          setError(form.phone, 'Podaj poprawny numer telefonu.');
+          return false;
+        }
+        setError(form.phone, '');
+        return true;
+      };
+
+      form.name.addEventListener('blur', validateName);
+      form.phone.addEventListener('blur', validatePhone);
+      form.name.addEventListener('input', () => { if (form.name.value.trim().length >= 2) setError(form.name, ''); });
+      form.phone.addEventListener('input', () => { if (CONFIG.phoneRegex.test(form.phone.value.trim())) setError(form.phone, ''); });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const valid = validateName() & validatePhone();
+        if (!valid) {
+          successEl.textContent = '';
+          return;
+        }
+
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            successEl.textContent = CONFIG.successMessage;
+            form.reset();
+            
+            window.dispatchEvent(new CustomEvent('vigaman:submit', {
+              detail: {
+                name: formData.get('name'),
+                phone: formData.get('phone')
+              }
+            }));
+            
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', { send_to: 'AW-XXXXX/XXXXX' });
+            }
+            if (typeof fbq === 'function') {
+              fbq('track', 'Purchase', { value: 99, currency: 'PLN' });
+            }
+            
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            successEl.textContent = 'Wystąpił błąd. Spróbuj ponownie.';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          successEl.textContent = 'Wystąpił błąd. Spróbuj ponownie.';
+        });
+      });
+
+      document.querySelectorAll('.faq-item button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.faq-item').forEach((el) => {
+            el.classList.remove('is-open');
+            el.querySelector('button').setAttribute('aria-expanded', 'false');
+            el.querySelector('.faq-icon').textContent = '+';
+          });
+          if (!isOpen) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+            btn.querySelector('.faq-icon').textContent = '−';
+          }
+        });
+      });
+
+      let lastScrollY = window.scrollY;
+      const stickyBar = document.querySelector('.sticky-bar');
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 300) {
+          stickyBar.style.transform = currentScrollY > lastScrollY ? 'translateY(100%)' : 'translateY(0)';
+        } else {
+          stickyBar.style.transform = 'translateY(0)';
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
